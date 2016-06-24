@@ -16,7 +16,7 @@ Some examples :
 
 or  
 
-![LaMetric Weekend example 2](https://raw.githubusercontent.com/pgrimaud/lametric-weekend/master/images/no.gif)
+![LaMetric Weekend example 2](https://raw.githubusercontent.com/pgrimaud/lametric-weekend/master/images/no.png)
 
 # Feedback
 
