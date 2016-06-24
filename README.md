@@ -4,9 +4,11 @@
 ![LaMetric Weekend Index](https://raw.githubusercontent.com/pgrimaud/lametric-weekend/master/images/weekend.gif)
 
 # How it works ?
-First, launch your LaMetric app, install our app "Is it weekend yet?" and choose a **Language** in the drop down menu.
+First, launch your LaMetric app, install our app "Is it weekend yet?" and choose a **Language*** in the drop down menu.
 
 ![LaMetric Weekend App](https://raw.githubusercontent.com/pgrimaud/lametric-weekend/master/images/app.png)
+
+* If you don't see your language, you can add it with a pull request. See the [CONTRIBUTING.md file](https://github.com/pgrimaud/lametric-weekend/blob/master/CONTRIBUTING.md)
 
 # Results
 
