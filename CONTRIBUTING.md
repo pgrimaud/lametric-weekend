@@ -1,6 +1,6 @@
 # Steps to add a new language :
 
-You wan to add the Spanish* language ? 
+You want to add the Spanish* language ? 
 
 - Fork the project
 - Clone the project
