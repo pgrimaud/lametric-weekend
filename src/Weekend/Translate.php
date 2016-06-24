@@ -32,11 +32,14 @@ class Translate
             $this->translations = include __DIR__ . '/../../translations/' . $this->lang . '.php';
         }
 
+        $englishTranslations = include __DIR__ . '/../../translations/english.php';
+
         if (isset($this->translations[md5($sentence)])) {
             return $this->translations[md5($sentence)];
-        } else {
-            $englishTranslations = include __DIR__ . '/../../translations/english.php';
+        } elseif (isset($englishTranslations[md5($sentence)])) {
             return $englishTranslations[md5($sentence)];
+        } else {
+            return $sentence;
         }
     }
 }

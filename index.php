@@ -1,6 +1,8 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
+header("Content-Type: application/json");
+
 try {
 
     $parameters = array_map('htmlspecialchars', $_GET);
@@ -19,5 +21,5 @@ try {
 
     $response = new Weekend\Response();
     echo $response->returnError();
-    
+
 }

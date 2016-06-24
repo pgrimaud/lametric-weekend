@@ -30,11 +30,8 @@ class Api
     {
         $ressource = $this->client->request('GET', $this->entryPoint);
 
-        if ($ressource->getStatusCode() !== 200) {
-            throw \Exception();
-        } else {
-            $data = $ressource->getBody();
-            return trim(json_decode($data, JSON_OBJECT_AS_ARRAY)['text']);
-        }
+        $data = $ressource->getBody();
+        return trim(json_decode($data, JSON_OBJECT_AS_ARRAY)['text']);
+
     }
 }

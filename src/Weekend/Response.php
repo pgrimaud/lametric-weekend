@@ -4,14 +4,6 @@ namespace Weekend;
 class Response
 {
     /**
-     * Response constructor.
-     */
-    public function __construct()
-    {
-        header("Content-Type: application/json");
-    }
-
-    /**
      * @return mixed
      */
     public function returnError()
