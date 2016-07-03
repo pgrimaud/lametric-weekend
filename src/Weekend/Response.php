@@ -34,6 +34,7 @@ class Response
     }
 
     /**
+     * @param $sentence
      * @return mixed
      */
     public function returnResponse($sentence)
@@ -47,7 +48,7 @@ class Response
                 ],
                 [
                     'index' => 1,
-                    'text' => addslashes($sentence),
+                    'text' => $sentence,
                     'icon' => 'null'
                 ]
             ]
