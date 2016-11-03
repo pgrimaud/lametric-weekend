@@ -1,5 +1,6 @@
 # "Is it weekend yet?" for LaMetric
 [![Build Status](https://travis-ci.org/pgrimaud/lametric-weekend.svg?branch=master)](https://travis-ci.org/pgrimaud/lametric-weekend)
+[![Test Coverage](https://codeclimate.com/github/pgrimaud/lametric-weekend/badges/coverage.svg)](https://codeclimate.com/github/pgrimaud/lametric-weekend/coverage)
 
 ![LaMetric Weekend Index](https://raw.githubusercontent.com/pgrimaud/lametric-weekend/master/images/weekend.gif)
 
