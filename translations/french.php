@@ -9,5 +9,6 @@ return [
     'c215c811b8791e49ccd39c177f58bd8d' => 'Et on perd un jour férié ce week-end :(',
     '3ab2f6f6b038e237765335ad0cea43fc' => 'Mais demain, on ne travaille pas \o/',
     '98ed3a487cf9f80c10bdafe2189fc531' => 'En fait, si. C\'est d’ores et déjà le week-end \o/',
-    '7514b1a515e6b5494236f32e24d34b6d' => 'Mais on ne travaille pas \o/'
+    '7514b1a515e6b5494236f32e24d34b6d' => 'Mais on ne travaille pas \o/',
+    '62d17a9dfd12f3ec8817c58a81b38669' => 'Non.'
 ];

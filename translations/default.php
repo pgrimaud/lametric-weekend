@@ -9,5 +9,6 @@ return [
     'c215c811b8791e49ccd39c177f58bd8d' => 'And we lose a holiday this weekend :(',
     '3ab2f6f6b038e237765335ad0cea43fc' => 'But tomorrow, we do not work \o/',
     '98ed3a487cf9f80c10bdafe2189fc531' => 'In fact, yes. This is already the weekend \o/',
-    '7514b1a515e6b5494236f32e24d34b6d' => 'But we do not work \o/'
+    '7514b1a515e6b5494236f32e24d34b6d' => 'But we do not work \o/',
+    '62d17a9dfd12f3ec8817c58a81b38669' => 'No.'
 ];
