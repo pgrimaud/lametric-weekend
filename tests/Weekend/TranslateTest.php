@@ -12,6 +12,16 @@ class TranslateTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($sentence, $translatedSentence);
     }
 
+    public function testTranslateWrongLanguage()
+    {
+        $translate = new \Weekend\Translate('NOPE');
+        $sentence = 'Almost, but not yet. :(';
+
+        $translatedSentence = $translate->getTranslation($sentence);
+
+        $this->assertEquals($sentence, $translatedSentence);
+    }
+
     public function testUnknownSentence()
     {
         $translate = new \Weekend\Translate('english');
