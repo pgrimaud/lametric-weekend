@@ -1,5 +1,4 @@
 <?php
-
 namespace Weekend;
 
 class Translate
