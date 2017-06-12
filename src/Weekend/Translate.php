@@ -1,4 +1,5 @@
 <?php
+
 namespace Weekend;
 
 class Translate
@@ -19,7 +20,14 @@ class Translate
      */
     public function __construct($lang = 'english')
     {
-        $this->lang = $lang;
+        // add more languages here if needed
+        $allowedLangs = [
+            'english',
+            'french',
+            'spanish'
+        ];
+
+        $this->lang = in_array($lang, $allowedLangs) ? strtolower($lang) : 'english';
     }
 
     /**

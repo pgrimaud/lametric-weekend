@@ -1,4 +1,5 @@
 <?php
+
 namespace Weekend;
 
 class Response
@@ -12,13 +13,13 @@ class Response
             'frames' => [
                 [
                     'index' => 0,
-                    'text' => 'Is it weekend yet?',
-                    'icon' => 'i2975'
+                    'text'  => 'Is it weekend yet?',
+                    'icon'  => 'i2975'
                 ],
                 [
                     'index' => 1,
-                    'text' => 'No',
-                    'icon' => 'null'
+                    'text'  => 'No',
+                    'icon'  => 'null'
                 ]
             ]
         ]);
@@ -43,13 +44,13 @@ class Response
             'frames' => [
                 [
                     'index' => 0,
-                    'text' => 'Is it weekend yet?',
-                    'icon' => 'i2975'
+                    'text'  => 'Is it weekend yet?',
+                    'icon'  => 'i2975'
                 ],
                 [
                     'index' => 1,
-                    'text' => $sentence,
-                    'icon' => 'null'
+                    'text'  => $sentence,
+                    'icon'  => 'null'
                 ]
             ]
         ]);
