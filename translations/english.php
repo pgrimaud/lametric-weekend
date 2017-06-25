@@ -3,7 +3,7 @@
 return [
     'd88d6b865ab77786075f28c80b293156' => 'Almost, but not yet. :(',
     'a1386a1de1a4d2efbff582b2d2874b2c' => 'Soon...',
-    '86aa3b4e1da49715bee032b02b24dfef' => 'It\'s the weekend! \o/',
+    '10e4e3a9b10056c177e3f4c131533f23' => 'It\'s the weekend! \o/',
     '3accdebf72a75061a33b3bd33d54a28a' => 'Officially no, but it\'s like.',
     'cbdf2122065fb2a68b1c14fd82482810' => 'It\'s the end... :(',
     'c215c811b8791e49ccd39c177f58bd8d' => 'And we lose a holiday this weekend :(',

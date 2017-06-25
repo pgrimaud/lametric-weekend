@@ -3,7 +3,7 @@
 return [
     'd88d6b865ab77786075f28c80b293156' => 'Presque, mais pas encore. :(',
     'a1386a1de1a4d2efbff582b2d2874b2c' => 'Bientôt...',
-    '86aa3b4e1da49715bee032b02b24dfef' => 'C\'est le week - end !\o/',
+    '10e4e3a9b10056c177e3f4c131533f23' => 'C\'est le week - end ! \o/',
     '3accdebf72a75061a33b3bd33d54a28a' => 'Officiellement non, mais c\'est comme si .',
     'cbdf2122065fb2a68b1c14fd82482810' => 'C\'est la fin... :(',
     'c215c811b8791e49ccd39c177f58bd8d' => 'Et on perd un jour férié ce week-end :(',
