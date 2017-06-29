@@ -34,21 +34,22 @@ class Response
     }
 
     /**
-     * @param $sentence
+     * @param $sentence1
+     * @param $sentence2
      * @return mixed
      */
-    public function returnResponse($sentence)
+    public function returnResponse($sentence1, $sentence2)
     {
         return $this->asJson([
             'frames' => [
                 [
                     'index' => 0,
-                    'text'  => 'Is it weekend yet?',
+                    'text'  => $sentence1,
                     'icon'  => 'i2975'
                 ],
                 [
                     'index' => 1,
-                    'text'  => $sentence,
+                    'text'  => $sentence2,
                     'icon'  => 'null'
                 ]
             ]

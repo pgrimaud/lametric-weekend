@@ -33,7 +33,7 @@ class Translate
      * @param $sentence
      * @return string
      */
-    public function getTranslation($sentence)
+    public function getSentence2($sentence)
     {
         if (is_file(__DIR__ . '/../../translations/' . $this->lang . '.php')) {
             $this->translations = include __DIR__ . '/../../translations/' . $this->lang . '.php';
@@ -48,5 +48,24 @@ class Translate
         } else {
             return $sentence;
         }
+    }
+
+    /**
+     * @return string
+     */
+    public function getSentence1()
+    {
+        $result = 'Is it weekend yet?';
+
+        switch (strtolower($this->lang)) {
+            case 'french':
+                $result = 'Est-ce que c\'est bientôt le week-end ?';
+                break;
+            case 'spanish':
+                $result = '¿Ya es fin de semana?';
+                break;
+        }
+        return $result;
+
     }
 }
