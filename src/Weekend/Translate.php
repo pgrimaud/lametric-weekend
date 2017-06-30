@@ -43,8 +43,6 @@ class Translate
 
         if (isset($this->translations[md5($sentence)])) {
             return $this->translations[md5($sentence)];
-        } elseif (isset($englishTranslations[md5($sentence)])) {
-            return $englishTranslations[md5($sentence)];
         } else {
             return $sentence;
         }

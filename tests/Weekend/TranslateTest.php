@@ -5,17 +5,35 @@ class TranslateTest extends PHPUnit_Framework_TestCase
     public function testTranslateFrenchSentence()
     {
         $translate = new \Weekend\Translate('french');
-        $sentence = 'Presque, mais pas encore. :(';
+        $sentence1 = 'Est-ce que c\'est bientôt le week-end ?';
 
-        $translatedSentence = $translate->getSentence2($sentence);
+        $sentence2 = 'Presque, mais pas encore. :(';
 
-        $this->assertEquals($sentence, $translatedSentence);
+        $translatedSentence1 = $translate->getSentence1();
+        $translatedSentence2 = $translate->getSentence2($sentence2);
+
+        $this->assertEquals($sentence1, $translatedSentence1);
+        $this->assertEquals($sentence2, $translatedSentence2);
+    }
+
+    public function testTranslateSpanishSentence()
+    {
+        $translate = new \Weekend\Translate('spanish');
+        $sentence1 = '¿Ya es fin de semana?';
+
+        $sentence2 = 'Casi, pero no todavía :(';
+
+        $translatedSentence1 = $translate->getSentence1();
+        $translatedSentence2 = $translate->getSentence2($sentence2);
+
+        $this->assertEquals($sentence1, $translatedSentence1);
+        $this->assertEquals($sentence2, $translatedSentence2);
     }
 
     public function testTranslateWrongLanguage()
     {
         $translate = new \Weekend\Translate('unknown');
-        $sentence = 'Non.';
+        $sentence  = 'Non.';
 
         $translatedSentence = $translate->getSentence2($sentence);
 
@@ -25,7 +43,7 @@ class TranslateTest extends PHPUnit_Framework_TestCase
     public function testUnknownSentence()
     {
         $translate = new \Weekend\Translate('english');
-        $sentence = 'Lorem ipsum';
+        $sentence  = 'Lorem ipsum';
 
         $translatedSentence = $translate->getSentence2($sentence);
 
@@ -35,7 +53,7 @@ class TranslateTest extends PHPUnit_Framework_TestCase
     public function testKnownSentenceOnlyOnEnglishTranslationFile()
     {
         $translate = new \Weekend\Translate('french');
-        $sentence = 'test';
+        $sentence  = 'test';
 
         $translatedSentence = $translate->getSentence2($sentence);
 
