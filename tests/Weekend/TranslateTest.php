@@ -7,7 +7,7 @@ class TranslateTest extends PHPUnit_Framework_TestCase
         $translate = new \Weekend\Translate('french');
         $sentence = 'Presque, mais pas encore. :(';
 
-        $translatedSentence = $translate->getTranslation($sentence);
+        $translatedSentence = $translate->getSentence2($sentence);
 
         $this->assertEquals($sentence, $translatedSentence);
     }
@@ -17,7 +17,7 @@ class TranslateTest extends PHPUnit_Framework_TestCase
         $translate = new \Weekend\Translate('unknown');
         $sentence = 'Non.';
 
-        $translatedSentence = $translate->getTranslation($sentence);
+        $translatedSentence = $translate->getSentence2($sentence);
 
         $this->assertEquals('No.', $translatedSentence);
     }
@@ -27,7 +27,7 @@ class TranslateTest extends PHPUnit_Framework_TestCase
         $translate = new \Weekend\Translate('english');
         $sentence = 'Lorem ipsum';
 
-        $translatedSentence = $translate->getTranslation($sentence);
+        $translatedSentence = $translate->getSentence2($sentence);
 
         $this->assertEquals($sentence, $translatedSentence);
     }
@@ -37,7 +37,7 @@ class TranslateTest extends PHPUnit_Framework_TestCase
         $translate = new \Weekend\Translate('french');
         $sentence = 'test';
 
-        $translatedSentence = $translate->getTranslation($sentence);
+        $translatedSentence = $translate->getSentence2($sentence);
 
         $this->assertEquals($sentence, $translatedSentence);
     }
