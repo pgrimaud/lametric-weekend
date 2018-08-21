@@ -1,4 +1,5 @@
 <?php
+
 namespace Weekend;
 
 use GuzzleHttp\Client;
@@ -8,6 +9,9 @@ use GuzzleHttp\HandlerStack;
 
 class ApiTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var Client
+     */
     private $client;
 
     public function setUp()
@@ -21,6 +25,9 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         $this->client = new Client(['handler' => $handler]);
     }
 
+    /**
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function testValidRessourceFromApi()
     {
         $api = new Api($this->client);
@@ -28,6 +35,9 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('Presque, mais pas encore. :(', $ressource);
     }
 
+    /**
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     public function testInvalidRessourceFromApi()
     {
         $this->expectException(ClientException::class);

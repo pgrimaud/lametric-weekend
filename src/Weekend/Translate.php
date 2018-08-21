@@ -1,4 +1,5 @@
 <?php
+
 namespace Weekend;
 
 class Translate
@@ -39,8 +40,6 @@ class Translate
             $this->translations = include __DIR__ . '/../../translations/' . $this->lang . '.php';
         }
 
-        $englishTranslations = include __DIR__ . '/../../translations/english.php';
-
         if (isset($this->translations[md5($sentence)])) {
             return $this->translations[md5($sentence)];
         } else {
@@ -53,8 +52,6 @@ class Translate
      */
     public function getSentence1()
     {
-        $result = 'Is it weekend yet?';
-
         switch (strtolower($this->lang)) {
             case 'french':
                 $result = 'Est-ce que c\'est bientôt le week-end ?';
@@ -62,8 +59,13 @@ class Translate
             case 'spanish':
                 $result = '¿Ya es fin de semana?';
                 break;
+            case 'portuguese':
+                $result = 'É logo o fim de semana?';
+                break;
+            default:
+                $result = 'Is it weekend yet?';
         }
-        return $result;
 
+        return $result;
     }
 }

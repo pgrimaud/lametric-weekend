@@ -1,11 +1,12 @@
 <?php
+
 namespace Weekend;
 
 class ResponseTest extends \PHPUnit_Framework_TestCase
 {
     public function testAsJsonResponse()
     {
-        $data = [
+        $data     = [
             'test'
         ];
         $response = new Response();
@@ -20,7 +21,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     {
         $response = new Response();
 
-        $asJson = $response->returnError();
+        $asJson       = $response->returnError();
         $responseFile = file_get_contents(__DIR__ . '/../responses/invalid.json');
 
         $this->assertSame($responseFile, $asJson);
@@ -30,7 +31,7 @@ class ResponseTest extends \PHPUnit_Framework_TestCase
     {
         $response = new Response();
 
-        $asJson = $response->returnResponse('Is it weekend yet?', 'Almost, but not yet. :(');
+        $asJson       = $response->returnResponse('Is it weekend yet?', 'Almost, but not yet. :(');
         $responseFile = file_get_contents(__DIR__ . '/../responses/valid.json');
 
         $this->assertSame($responseFile, $asJson);

@@ -5,10 +5,10 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "5.4.*",
-    "codeclimate/php-test-reporter": "dev-master"
+    "phpunit/phpunit": "^5.4"
   },
   "require": {
+    "ext-json": "*",
     "guzzlehttp/guzzle": "^6.2"
   }
 }
