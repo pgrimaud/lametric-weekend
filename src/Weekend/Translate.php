@@ -61,7 +61,7 @@ class Translate
                 $result = '¿Ya es fin de semana?';
                 break;
             case 'portuguese':
-                $result = 'É logo o fim de semana?';
+                $result = 'Já é fim de semana?';
                 break;
             default:
                 $result = 'Is it weekend yet?';
