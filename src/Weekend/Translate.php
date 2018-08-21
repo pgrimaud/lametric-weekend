@@ -24,7 +24,8 @@ class Translate
         $allowedLangs = [
             'english',
             'french',
-            'spanish'
+            'spanish',
+            'portuguese'
         ];
 
         $this->lang = in_array($lang, $allowedLangs) ? strtolower($lang) : 'english';
