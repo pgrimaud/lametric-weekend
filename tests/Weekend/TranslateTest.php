@@ -60,4 +60,3 @@ class TranslateTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($sentence, $translatedSentence);
     }
 }
-

@@ -53,4 +53,3 @@ class ApiTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('Presque, mais pas encore. :(', $ressource);
     }
 }
-
