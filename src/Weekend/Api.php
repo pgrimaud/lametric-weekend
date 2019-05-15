@@ -34,7 +34,7 @@ class Api
     public function fetch()
     {
         $ressource = $this->client->request('GET', $this->entryPoint, [
-            'verify' => true
+            'verify' => false
         ]);
 
         $data = $ressource->getBody();
