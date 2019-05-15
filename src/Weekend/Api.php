@@ -23,11 +23,7 @@ class Api
      */
     public function __construct(Client $client = null, $entryPoint = null)
     {
-        $this->client     = $client ?: new Client([
-            'defaults' => [
-                'verify' => false
-            ]
-        ]);
+        $this->client     = $client ?: new Client();
         $this->entryPoint = $entryPoint ?: 'https://estcequecestbientotleweekend.fr/api';
     }
 
@@ -37,7 +33,9 @@ class Api
      */
     public function fetch()
     {
-        $ressource = $this->client->request('GET', $this->entryPoint);
+        $ressource = $this->client->request('GET', $this->entryPoint, [
+            'verify' => true
+        ]);
 
         $data = $ressource->getBody();
         return trim(json_decode($data, JSON_OBJECT_AS_ARRAY)['text']);
