@@ -18,7 +18,7 @@ class Response
                 ],
                 [
                     'index' => 1,
-                    'text'  => 'No',
+                    'text'  => 'Error',
                     'icon'  => 'null'
                 ]
             ]
