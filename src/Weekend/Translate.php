@@ -24,6 +24,7 @@ class Translate
         $allowedLangs = [
             'english',
             'french',
+            'german',
             'spanish',
             'portuguese'
         ];
@@ -56,6 +57,9 @@ class Translate
         switch (strtolower($this->lang)) {
             case 'french':
                 $result = 'Est-ce que c\'est bientôt le week-end ?';
+                break;
+            case 'german':
+                $result = 'Ist es bereits Wochenende?';
                 break;
             case 'spanish':
                 $result = '¿Ya es fin de semana?';
