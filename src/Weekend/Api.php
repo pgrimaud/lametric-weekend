@@ -23,8 +23,12 @@ class Api
      */
     public function __construct(Client $client = null, $entryPoint = null)
     {
-        $this->client     = $client ?: new Client();
-        $this->entryPoint = $entryPoint ?: 'http://estcequecestbientotleweekend.fr/api';
+        $this->client     = $client ?: new Client([
+            'defaults' => [
+                'verify' => false
+            ]
+        ]);
+        $this->entryPoint = $entryPoint ?: 'https://estcequecestbientotleweekend.fr/api';
     }
 
     /**
