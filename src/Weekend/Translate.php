@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Weekend;
 
 class Translate
@@ -7,18 +9,17 @@ class Translate
     /**
      * @var string
      */
-    private $lang;
+    private string $lang;
 
     /**
      * @var array
      */
-    private $translations = [];
+    private array $translations = [];
 
     /**
-     * Translate constructor.
      * @param string $lang
      */
-    public function __construct($lang = 'english')
+    public function __construct(string $lang = 'english')
     {
         // add more languages here if needed
         $allowedLangs = [
@@ -26,17 +27,17 @@ class Translate
             'french',
             'german',
             'spanish',
-            'portuguese'
+            'portuguese',
         ];
 
         $this->lang = in_array($lang, $allowedLangs) ? strtolower($lang) : 'english';
     }
 
     /**
-     * @param $sentence
+     * @param string $sentence
      * @return string
      */
-    public function getSentence2($sentence)
+    public function getSentence2(string $sentence): string
     {
         if (is_file(__DIR__ . '/../../translations/' . $this->lang . '.php')) {
             $this->translations = include __DIR__ . '/../../translations/' . $this->lang . '.php';
@@ -52,7 +53,7 @@ class Translate
     /**
      * @return string
      */
-    public function getSentence1()
+    public function getSentence1(): string
     {
         switch (strtolower($this->lang)) {
             case 'french':

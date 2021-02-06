@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Weekend;
 
 use GuzzleHttp\Client;
@@ -9,19 +11,19 @@ class Api
     /**
      * @var Client
      */
-    private $client;
+    private Client $client;
 
     /**
      * @var string
      */
-    private $entryPoint;
+    private string $entryPoint;
 
     /**
      * Api constructor.
      * @param Client|null $client
-     * @param null        $entryPoint
+     * @param string $entryPoint
      */
-    public function __construct(Client $client = null, $entryPoint = null)
+    public function __construct(Client $client = null, string $entryPoint = '')
     {
         $this->client     = $client ?: new Client();
         $this->entryPoint = $entryPoint ?: 'https://estcequecestbientotleweekend.fr/api';
@@ -31,13 +33,13 @@ class Api
      * @return string
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function fetch()
+    public function fetch(): string
     {
-        $ressource = $this->client->request('GET', $this->entryPoint, [
-            'verify' => false
+        $resource = $this->client->request('GET', $this->entryPoint, [
+            'verify' => false,
         ]);
 
-        $data = $ressource->getBody();
+        $data = $resource->getBody();
         return trim(json_decode($data, JSON_OBJECT_AS_ARRAY)['text']);
     }
 }
