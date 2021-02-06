@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Weekend;
 
 use GuzzleHttp\Client;
+use Predis\Client as PredisClient;
 
 class Api
 {
@@ -19,14 +20,20 @@ class Api
     private string $entryPoint;
 
     /**
-     * Api constructor.
+     * @var PredisClient
+     */
+    private PredisClient $predisClient;
+
+    /**
      * @param Client|null $client
      * @param string $entryPoint
+     * @param PredisClient|null $predisClient
      */
-    public function __construct(Client $client = null, string $entryPoint = '')
+    public function __construct(Client $client = null, PredisClient $predisClient = null, string $entryPoint = '')
     {
-        $this->client     = $client ?: new Client();
-        $this->entryPoint = $entryPoint ?: 'https://estcequecestbientotleweekend.fr/api';
+        $this->client       = $client ?: new Client;
+        $this->entryPoint   = $entryPoint ?: 'https://estcequecestbientotleweekend.fr/api';
+        $this->predisClient = $predisClient ?: new PredisClient;
     }
 
     /**
@@ -35,11 +42,20 @@ class Api
      */
     public function fetch(): string
     {
-        $resource = $this->client->request('GET', $this->entryPoint, [
-            'verify' => false,
-        ]);
+        $redisKey = 'lametric:weekend';
 
-        $data = $resource->getBody();
-        return trim(json_decode((string)$data, true)['text']);
+        $sentence = $this->predisClient->get($redisKey);
+        $ttl      = $this->predisClient->ttl($redisKey);
+
+        if (!$sentence || $ttl < 0) {
+            $resource = $this->client->request('GET', $this->entryPoint, [
+                'verify' => false,
+            ]);
+            $sentence = (string)$resource->getBody();
+
+            $this->predisClient->set($redisKey, $sentence, null, 5 * 60);
+        }
+
+        return trim(json_decode((string)$sentence, true)['text']);
     }
 }
