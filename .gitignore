@@ -1,3 +1,4 @@
-vendor
-build
+/vendor
+/build
 composer.lock
+/config/parameters.php
