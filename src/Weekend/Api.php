@@ -40,6 +40,6 @@ class Api
         ]);
 
         $data = $resource->getBody();
-        return trim(json_decode($data, JSON_OBJECT_AS_ARRAY)['text']);
+        return trim(json_decode((string)$data, JSON_OBJECT_AS_ARRAY)['text']);
     }
 }
