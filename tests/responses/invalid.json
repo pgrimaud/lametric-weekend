@@ -1,14 +1,1 @@
-{
-    "frames": [
-        {
-            "index": 0,
-            "text": "Is it weekend yet?",
-            "icon": "i2975"
-        },
-        {
-            "index": 1,
-            "text": "Error",
-            "icon": "null"
-        }
-    ]
-}
+{"frames":[{"index":0,"text":"Is it weekend yet?","icon":"i2975"},{"index":1,"text":"Error","icon":"null"}]}

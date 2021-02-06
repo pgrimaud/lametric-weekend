@@ -14,9 +14,7 @@ class ResponseTest extends TestCase
         $response = new Response();
 
         $asJson = $response->asJson($data);
-        $this->assertSame('[
-    "test"
-]', $asJson);
+        $this->assertSame('["test"]', $asJson);
     }
 
     public function testErrorResponse()
