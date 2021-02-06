@@ -6,15 +6,16 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
+use PHPUnit\Framework\TestCase;
 
-class ApiTest extends \PHPUnit_Framework_TestCase
+class ApiTest extends TestCase
 {
     /**
      * @var Client
      */
     private $client;
 
-    public function setUp()
+    public function setUp(): void
     {
         $fixtures = file_get_contents(__DIR__ . '/../fixtures/apiresponse.json');
 

@@ -1,6 +1,8 @@
 <?php
 
-class TranslateTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class TranslateTest extends TestCase
 {
     public function testTranslateFrenchSentence()
     {

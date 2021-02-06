@@ -1,30 +1,7 @@
-<phpunit backupGlobals="false"
-         backupStaticAttributes="false"
-         bootstrap="vendor/autoload.php"
-         colors="true"
-         reportUselessTests="true"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true"
-         forceCoversAnnotation="false"
-         mapTestClassNameToCoveredClassName="false"
-         processIsolation="false"
-         stopOnError="false"
-         stopOnFailure="false"
-         stopOnIncomplete="false"
-         stopOnSkipped="false"
-         verbose="true">
-
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src/Weekend</directory>
-        </whitelist>
-    </filter>
-
+<phpunit bootstrap="vendor/autoload.php">
     <testsuites>
-        <testsuite name="Is it weekend yet?">
-            <directory>tests/Weekend</directory>
+        <testsuite name="weekend">
+            <directory>tests</directory>
         </testsuite>
     </testsuites>
-
 </phpunit>

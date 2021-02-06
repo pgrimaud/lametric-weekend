@@ -1,3 +1,4 @@
 /vendor
 /build
 /config/parameters.php
+.phpunit.result.cache
