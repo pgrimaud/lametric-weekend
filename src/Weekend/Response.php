@@ -33,7 +33,7 @@ class Response
      */
     public function asJson(array $data = []): string
     {
-        return json_encode($data, JSON_PRETTY_PRINT);
+        return json_encode($data);
     }
 
     /**
