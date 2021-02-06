@@ -1,5 +1,11 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload.php';
+$config = require_once __DIR__ . '/../config/parameters.php';
+
+Sentry\init(['dsn' => $config['sentry_key']]);
 
 header("Content-Type: application/json");
 
