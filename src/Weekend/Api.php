@@ -53,7 +53,8 @@ class Api
             ]);
             $sentence = (string)$resource->getBody();
 
-            $this->predisClient->set($redisKey, $sentence, null, 5 * 60);
+            $this->predisClient->set($redisKey, $sentence);
+            $this->predisClient->expire($redisKey, 5 * 60);
         }
 
         return trim(json_decode((string)$sentence, true)['text']);

@@ -21,6 +21,24 @@ class ApiTest extends TestCase
      */
     private Client $client;
 
+    /**
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function testInvalidRessourceFromApi()
+    {
+        $this->expectException(ClientException::class);
+
+        $response = new \GuzzleHttp\Psr7\Response(404, []);
+        $mock     = new MockHandler([$response]);
+
+        $handler = HandlerStack::create($mock);
+        $client  = new Client(['handler' => $handler]);
+
+        $api       = new Api($client, $this->redisMockClass);
+        $ressource = $api->fetch();
+        $this->assertSame('Presque, mais pas encore. :(', $ressource);
+    }
+
     public function setUp(): void
     {
         $fixtures = file_get_contents(__DIR__ . '/../fixtures/apiresponse.json');
@@ -42,24 +60,6 @@ class ApiTest extends TestCase
     public function testValidRessourceFromApi()
     {
         $api       = new Api($this->client, $this->redisMockClass);
-        $ressource = $api->fetch();
-        $this->assertSame('Presque, mais pas encore. :(', $ressource);
-    }
-
-    /**
-     * @throws \GuzzleHttp\Exception\GuzzleException
-     */
-    public function testInvalidRessourceFromApi()
-    {
-        $this->expectException(ClientException::class);
-
-        $response = new \GuzzleHttp\Psr7\Response(404, []);
-        $mock     = new MockHandler([$response]);
-
-        $handler = HandlerStack::create($mock);
-        $client  = new Client(['handler' => $handler]);
-
-        $api       = new Api($client, $this->redisMockClass);
         $ressource = $api->fetch();
         $this->assertSame('Presque, mais pas encore. :(', $ressource);
     }

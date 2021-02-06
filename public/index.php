@@ -24,7 +24,7 @@ try {
     $response = new Weekend\Response();
     echo $response->returnResponse($sentence1, $sentence2);
 
-} Catch (Exception $exception) {
+} catch (Exception $exception) {
 
     $response = new Weekend\Response();
     echo $response->returnError();
