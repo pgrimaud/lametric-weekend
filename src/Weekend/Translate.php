@@ -28,6 +28,7 @@ class Translate
             'german',
             'spanish',
             'portuguese',
+            'dutch',
         ];
 
         $this->lang = in_array($lang, $allowedLangs) ? strtolower($lang) : 'english';
@@ -67,6 +68,9 @@ class Translate
                 break;
             case 'portuguese':
                 $result = 'Já é fim de semana?';
+                break;
+            case 'dutch':
+                $result = 'Is het al weekend?';
                 break;
             default:
                 $result = 'Is it weekend yet?';
