@@ -1,5 +1,7 @@
 # "Is it weekend yet?" for LaMetric
-[![Build Status](https://travis-ci.org/pgrimaud/lametric-weekend.svg?branch=master)](https://travis-ci.org/pgrimaud/lametric-weekend)
+
+> [!CAUTION]
+> READ-ONLY : APP MIGRATED TO https://github.com/pgrimaud/lumiere
 
 ![LaMetric Weekend Index](https://raw.githubusercontent.com/pgrimaud/lametric-weekend/master/images/weekend.gif)
 
